@@ -26,12 +26,16 @@ const component = (name, age, job) => {
     age: age,
     job: job,
   };
+  //* Form content 생성
+
+  const formContent = `
+  ${inputComponent("이름", "name", "name", obj.name)}
+  ${inputComponent("나이", "age", "age", obj.age)}
+  ${inputComponent("직업", "job", "job", obj.job)}
+  `;
+
+  //* Form 컴포넌트의 결합
+  return `
+  ${formComponent("/submit", "post", formContent)}
+  `;
 };
-
-//* Form content 생성
-
-const formContent = `
-${inputComponent("이름", "name", "name", obj.name)}
-${inputComponent("나이", "age", "age", obj.age)}
-${inputComponent("직업", "job", "job", obj.job)}
-`;
