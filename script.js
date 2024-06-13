@@ -18,4 +18,12 @@ const inputComponent = (label, id, name, value) => {
 };
 console.log(inputComponent("Hello", "asd", "name1", "value1"));
 
+//* 전체 컴포넌트
 
+const component = (name, age, job) => {
+  let obj = {
+    name: name,
+    age: age,
+    job: job,
+  };
+};
