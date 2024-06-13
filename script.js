@@ -27,3 +27,11 @@ const component = (name, age, job) => {
     job: job,
   };
 };
+
+//* Form content 생성
+
+const formContent = `
+${inputComponent("이름", "name", "name", obj.name)}
+${inputComponent("나이", "age", "age", obj.age)}
+${inputComponent("직업", "job", "job", obj.job)}
+`;
