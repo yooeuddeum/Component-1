@@ -44,4 +44,22 @@ const component = (name, age, job) => {
 function renderApp() {
   const root = document.getElementById("root");
   root.innerHTML = component("유으뜸", 1414, "수강생"); // innerHTML로 문서가 작성됨
+
+  //* DOM 조작
+
+  const submitButton = document.getElementById("submit-button");
+
+  submitButton.addEventListener("click", () => {
+    const form = document.getElementById("user-form");
+    const formData = new FormData(form);
+    //* FormData 객체를 이용하여 데이터 취합
+    //* 서버로 전송할 데이터를 취합
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+    console.log(data);
+  });
 }
+
+window.addEventListener("DOMContentLoaded", renderApp);
