@@ -9,4 +9,13 @@ const formComponent = (action, method, content) => {
 };
 console.log(formComponent("/submit", "POST", "gggg"));
 
+//* Input 컴포넌트
+const inputComponent = (label, id, name, value) => {
+  return `
+  <label for = "${id}>${label}:</label>
+  <input type = "text" id ="${id}" name = "${name}" value = "${value}" required>
+  `;
+};
+console.log(inputComponent("Hello", "asd", "name1", "value1"));
+
 
