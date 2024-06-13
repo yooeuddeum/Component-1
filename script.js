@@ -39,3 +39,9 @@ const component = (name, age, job) => {
   ${formComponent("/submit", "post", formContent)}
   `;
 };
+
+//* 페이지가 로드될 때 컴포넌트를 랜더링
+function renderApp() {
+  const root = document.getElementById("root");
+  root.innerHTML = component("유으뜸", 1414, "수강생"); // innerHTML로 문서가 작성됨
+}
